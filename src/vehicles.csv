@@ -1,0 +1,8 @@
+L23467,Truck,10,Left,12,12,Not Crossed,S1
+A78646,Car,3,Straight,4,5,Not Crossed,S2
+E56665,Bus,18,Right,14,11,Not Crossed,S2
+W56436,Truck,5,Left,10,14,Not Crossed,S3
+Q99888,Car,8,Straight,7,15,Not Crossed,S4
+F56563,Bus,4,Right,15,10,Not Crossed,S3
+T55657,Car,11,Straight,20,5,Not Crossed,S4
+Y55668,Bus,20,Left,24,3,Not Crossed,S1
