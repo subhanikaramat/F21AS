@@ -1,6 +1,7 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.util.Vector;
 
 import javax.swing.BorderFactory;
@@ -55,6 +56,7 @@ public class addVehicles extends JPanel {
         // Create the table and set its model
         addVehiclesTable = new JTable(tableModel);
         addVehiclesTable.getTableHeader().setBackground(Color.gray);
+        addVehiclesTable.getTableHeader().setFont(new Font("Arial", Font.BOLD, 10));
      // Set the preferred width of the first two columns
         addVehiclesTable.getColumnModel().getColumn(0).setPreferredWidth(100);
         addVehiclesTable.getColumnModel().getColumn(1).setPreferredWidth(100);

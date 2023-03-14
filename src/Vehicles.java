@@ -1,6 +1,7 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -11,23 +12,14 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.SwingConstants;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
 public class Vehicles extends JPanel {
     public DefaultTableModel vehiclesTableModel;
     public JTable vehiclesTable;
     public static int records = 0;
-    
-    public JTable getTable()
-    {
-    	return vehiclesTable;
-    }
-    
-    public DefaultTableModel getVehiclesTableModel()
-    {
-    	return vehiclesTableModel;
-    }
-    
     
     
     public Vehicles() {
@@ -62,8 +54,15 @@ public class Vehicles extends JPanel {
 
         vehiclesTable = new JTable(vehiclesTableModel);
         vehiclesTable.getTableHeader().setBackground(Color.gray);
+        vehiclesTable.getTableHeader().setFont(new Font("Arial", Font.BOLD, 10)); // Set the font size of the table header
         vehiclesTable.setName("VEHICLES");
         vehiclesTable.setEnabled(false);
+
+        // Set the font size of the table rows
+        DefaultTableCellRenderer renderer = new DefaultTableCellRenderer();
+        renderer.setHorizontalAlignment(SwingConstants.LEFT);
+        renderer.setFont(new Font("Arial", Font.PLAIN, 6));
+        vehiclesTable.setDefaultRenderer(Object.class, renderer);
 
         // Add the table to a scroll pane
         JScrollPane scrollPane = new JScrollPane(vehiclesTable);
@@ -80,8 +79,15 @@ public class Vehicles extends JPanel {
         
         
     }
-	public DefaultTableModel getTableModel() {
-		// TODO Auto-generated method stub
-		return vehiclesTableModel;
-	}
+    
+    //Getter methods for the table model and table
+    
+    public DefaultTableModel getVehiclesTableModel()
+    {
+    	return vehiclesTableModel;
+    }
+    public JTable getTable()
+    {
+    	return vehiclesTable;
+    }
 }

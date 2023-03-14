@@ -1,8 +1,12 @@
-L23467,Truck,10,Left,12,12,Not Crossed,S1
-A78646,Car,3,Straight,4,5,Not Crossed,S2
-E56665,Bus,18,Right,14,11,Not Crossed,S2
-W56436,Truck,5,Left,10,14,Not Crossed,S3
-Q99888,Car,8,Straight,7,15,Not Crossed,S4
-F56563,Bus,4,Right,15,10,Not Crossed,S3
-T55657,Car,11,Straight,20,5,Not Crossed,S4
-Y55668,Bus,20,Left,24,3,Not Crossed,S1
+A3445,Car,45,Right,56,34,Crossed,S1
+W4567,Truck,76,Straight,78,90,Not Crossed,S1
+T3335, Bus,45,Left,87,44,Not Crossed,S2
+Y6578,Truck,76, Left,87,50,Not Crossed,S2
+X8786, Bus,45, Left,46,54,Crossed,S3
+U4567,Truck,76,Straight,38,60,Not Crossed,S3
+H4567,Car,45,Right,26,88,Not Crossed,S4
+B7678,Bus,76,Straight,38,96,Not Crossed,S4
+T24344,Truck,56,Straight,67,78,Crossed,S2
+Q3444,Bus,56,Left,78,98,Crossed,S4
+W4566,Truck,56,Straight,78,78,Not Crossed,S3
+R455,Car,56,Right,56,7,Crossed,S1

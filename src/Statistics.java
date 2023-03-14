@@ -7,16 +7,15 @@ import java.awt.*;
 import java.util.Vector;
 
 public class Statistics extends JPanel {
-    public DefaultTableModel tableModel;
-    public JTable StatisticsTable;
+    public DefaultTableModel tableModel; // instance variable for the table model
+    public JTable StatisticsTable; // instance variable for the table
 
-    public DefaultTableModel getStatisticsTableModel()
-    {
-    	return tableModel;
+    public DefaultTableModel getStatisticsTableModel() {
+        return tableModel; // method to return the table model
     }
-    public JTable getStatisticsTable()
-    {
-    	return StatisticsTable;
+
+    public JTable getStatisticsTable() {
+        return StatisticsTable; // method to return the table
     }
     
     public Statistics() {
@@ -24,44 +23,35 @@ public class Statistics extends JPanel {
 
         // Define the column names and data types for the table
         Vector<String> columnNames = new Vector<String>();
-        columnNames.add("Segment");
-        columnNames.add("Waiting time");
-        columnNames.add("Waiting length");
-        columnNames.add("Cross Time");
+        columnNames.add("Segment"); // add column for segment
+        columnNames.add("Waiting time"); // add column for waiting time
+        columnNames.add("Waiting length"); // add column for waiting length
+        columnNames.add("Cross Time"); // add column for cross time
 
+        // Create the table model with the column names and 0 rows
         tableModel = new DefaultTableModel(columnNames, 0);
         
+        // Create the table with the table model
         StatisticsTable = new JTable(tableModel); 
+        
+        // Set the background color of the table header to gray
         StatisticsTable.getTableHeader().setBackground(Color.gray);
+        StatisticsTable.getTableHeader().setFont(new Font("Arial", Font.BOLD, 10));
+        // Disable editing on the table
         StatisticsTable.setEnabled(false);
-        
-//        Vector<String> data = new Vector<String>();
-//        String[] segments = {"S1", "S2", "S3", "S4"};
-        
-        
-//        
-//        data.add("S1");
-//        data.add("10 s");
-//        data.add("20 m");
-//        data.add("30 s");
-//        
-//        
-//        tableModel.addRow(data);
-//        tableModel.addRow(data);
-//        tableModel.addRow(data);
-//        tableModel.addRow(data);        
-//
-//        
-
+          
+        // Create a scroll pane for the table
         JScrollPane scrollPane = new JScrollPane(StatisticsTable);
 
+        // Add empty border to the scroll pane
         scrollPane.setBorder(BorderFactory.createEmptyBorder(5, 0, 5, 0));
+        
+        // Set the preferred size of the scroll pane
         scrollPane.setPreferredSize(new Dimension(200, 200));
 
-        
         // Add the scroll pane to the panel
         setLayout(new BorderLayout());
-        add(new JLabel("Statistics", JLabel.CENTER), BorderLayout.NORTH);
-        add(scrollPane, BorderLayout.CENTER);
+        add(new JLabel("Statistics", JLabel.CENTER), BorderLayout.NORTH); // Add a label "Statistics" to the top center of the panel
+        add(scrollPane, BorderLayout.CENTER); // Add the scroll pane to the center of the panel
     }
 }

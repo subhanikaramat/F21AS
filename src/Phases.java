@@ -1,6 +1,7 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.LayoutManager;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -21,16 +22,26 @@ public class Phases extends JPanel {
     public DefaultTableModel tableModel;
     public JTable PhaseTable;
 
+    //Getter methods for the table model and table
+    public DefaultTableModel getPhaseTableModel()
+    {
+    	return tableModel;
+    }
+    public JTable getPhaseTable()
+    {
+    	return PhaseTable;
+    }
+    
     public Phases() {
 
         // Define the column names and data types for the table
         Vector<String> columnNames = new Vector<String>();
         columnNames.add("Phase");
         columnNames.add("Duration");
-
+        
         // Create the table model and set the column names
         tableModel = new DefaultTableModel(columnNames, 0);
-
+        
         // Read the data from the CSV file and add it to the table model
         String csvFile = "src/intersection.csv";
         String line;
@@ -45,10 +56,12 @@ public class Phases extends JPanel {
 
         // Create the table and set its model
         PhaseTable = new JTable(tableModel);
+       
+        // Set table header background color and disable table editing
         PhaseTable.getTableHeader().setBackground(Color.gray);
+        PhaseTable.getTableHeader().setFont(new Font("Arial", Font.BOLD, 10));
         PhaseTable.setEnabled(false);
         PhaseTable.setRowHeight(20);
-
 
         // Set the preferred width of each column
         TableColumnModel columnModel = PhaseTable.getColumnModel();
