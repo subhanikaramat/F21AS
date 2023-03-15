@@ -1,0 +1,11 @@
+A3445,Car,45,Right,56,34,Crossed,S1
+W4567,Truck,76,Straight,78,90,Not Crossed,S1
+T3335, Bus,45,Left,87,44,Not Crossed,S2
+Y6578,Truck,76, Left,87,50,Not Crossed,S2
+X8786, Bus,45, Left,46,54,Crossed,S3
+U4567,Truck,76,Straight,38,60,Not Crossed,S3
+H4567,Car,45,Right,26,88,Not Crossed,S4
+B7678,Bus,76,Straight,38,96,Not Crossed,S4
+T24344,Truck,56,Straight,67,78,Crossed,S2
+Q3444,Bus,56,Left,78,98,Crossed,S4
+W4566,Truck,56,Straight,78,78,Not Crossed,S3
