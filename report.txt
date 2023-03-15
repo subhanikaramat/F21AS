@@ -1,9 +1,9 @@
 Total vehicles crossed per phase: 
-S1: 101
+S1: 45
 S2: 56
 S3: 45
 S4: 56
 
-Average waiting time to cross: 51 seconds
+Average waiting time to cross: 18 seconds
 
-Total  emission TIme : 271 kg
+Total  emission TIme : 694 g
