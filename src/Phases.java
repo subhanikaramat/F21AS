@@ -1,7 +1,6 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Font;
 import java.awt.LayoutManager;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -59,7 +58,6 @@ public class Phases extends JPanel {
        
         // Set table header background color and disable table editing
         PhaseTable.getTableHeader().setBackground(Color.gray);
-        PhaseTable.getTableHeader().setFont(new Font("Arial", Font.BOLD, 10));
         PhaseTable.setEnabled(false);
         PhaseTable.setRowHeight(20);
 

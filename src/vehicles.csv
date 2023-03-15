@@ -9,4 +9,3 @@ B7678,Bus,76,Straight,38,96,Not Crossed,S4
 T24344,Truck,56,Straight,67,78,Crossed,S2
 Q3444,Bus,56,Left,78,98,Crossed,S4
 W4566,Truck,56,Straight,78,78,Not Crossed,S3
-R455,Car,56,Right,56,7,Crossed,S1

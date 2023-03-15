@@ -36,7 +36,7 @@ public class Statistics extends JPanel {
         
         // Set the background color of the table header to gray
         StatisticsTable.getTableHeader().setBackground(Color.gray);
-        StatisticsTable.getTableHeader().setFont(new Font("Arial", Font.BOLD, 10));
+        
         // Disable editing on the table
         StatisticsTable.setEnabled(false);
           

@@ -14,6 +14,7 @@ public class SimulationStage extends JFrame {
 
     JButton addButton, cancelButton, exitButton;
     JLabel Result;
+    JTextField Result2;
     
     public int totalCrossedVehicles = 0; // Counter for total number of crossed vehicles
 	public int totalWaitingTime = 0,one,two,three,four; // Counters for total waiting time of vehicles in each phase
@@ -29,12 +30,10 @@ public class SimulationStage extends JFrame {
     {
         // Create instances of each table and add them to the GUI
     	vehicles = new Vehicles(); // Re-initialize Vehicles table instance
-    	vehicles.setBackground(new Color(240, 240, 240));
     	BorderLayout borderLayout = (BorderLayout) vehicles.getLayout(); // Set layout for Vehicles table
     	JTable vehiclesTable = vehicles.getTable(); // Get the table from Vehicles instance
     	
         phasesTable= new Phases(); // Re-initialize Phases table instance
-        phasesTable.setPreferredSize(new Dimension(80, 114));
         statisticsTable = new Statistics(); // Re-initialize Statistics table instance
         addVehiclesTable= new addVehicles(); // Re-initialize addVehicles table instance
         
@@ -160,7 +159,7 @@ cancelButton = new JButton("Cancel");
                 writer.write("S3: " + three + "\n");
                 writer.write("S4: " + four + "\n\n");
                 writer.write("Average waiting time to cross: " + avgWaitingTime + " seconds\n\n");
-                writer.write("Total  emission TIme : " + totalEsmission  + " kg\n");
+                writer.write("Total  emission TIme : " + totalEsmission  + " g\n");
                 writer.close();
                 System.exit(0);
             } catch (IOException ex) {
@@ -174,7 +173,8 @@ cancelButton = new JButton("Cancel");
 
      // Create a JLabel with initial text "0" and set its preferred size
         Result = new JLabel("0");
-        Result.setFont(new Font("Tahoma", Font.PLAIN, 50));
+        Result.setFont(new Font("Tahoma", Font.PLAIN, 20));
+        Result.setPreferredSize(new Dimension(200, 22));
 
         // Set background color for buttons
         addButton.setBackground(Color.gray);
@@ -194,6 +194,7 @@ cancelButton = new JButton("Cancel");
         // Create a horizontal box to contain the buttons
         Box buttonBox = Box.createHorizontalBox();
         buttonBox.add(Box.createHorizontalGlue());
+        buttonBox.add(Box.createRigidArea(new Dimension(0, 0)));
         buttonBox.add(addButton);
         addButton.setBounds(100,100,110,10);
         buttonBox.add(Box.createRigidArea(new Dimension(20, 0)));
@@ -226,6 +227,7 @@ cancelButton = new JButton("Cancel");
         JPanel rightPanel = new JPanel();
         rightPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
         rightPanel.add(Result);
+        rightPanel.setPreferredSize(new Dimension(400, getHeight()));
 
         // Add the right panel to the JFrame
         getContentPane().add(rightPanel, BorderLayout.EAST);
@@ -391,9 +393,13 @@ cancelButton = new JButton("Cancel");
     		
 
     		// Set the text of the Result label to show the total emission
-    		Result.setText("CO2:  "+Integer.toString(totalEsmission)+" kg");
+//    		Result2.setText("");
+//    		Result2.setText("CO2 Emission");
+    		//Object.setFont(new Font("Font-Style", Font-Weight, Font Size))
+//    		Result.setFont(new Font("Arial",Font.PLAIN,20));
+    		Result.setText("CO2 Emission: " +Integer.toString(totalEsmission)+" kg");
 
-    }
+    } 
    
    // This is the main method which creates an Object of SimulationStage class.
     public static void main(String[] args) {
